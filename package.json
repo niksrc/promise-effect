@@ -1,6 +1,6 @@
 {
   "name": "promise-effect",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Runs side effect as promise callback and returns original value",
   "license": "MIT",
   "repository": "niksrc/promise-effect",
