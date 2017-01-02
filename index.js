@@ -2,13 +2,12 @@
 const Promise = require('any-promise');
 const isFunction = require('is-function');
 
-module.exports = (fn, val) => {
-	fn = fn || (() => {});
-	if (!isFunction) {
-		throw new Error('First Parameter of promise-always must be a function');
+module.exports = fn => {
+	if (!isFunction(fn)) {
+		throw new Error('Parameter must be a function');
 	}
 
-	return function () {
+	return function (val) {
 		fn(val);
 		return Promise.resolve(val);
 	};
