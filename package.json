@@ -1,0 +1,35 @@
+{
+  "name": "promise-always",
+  "version": "0.0.0",
+  "description": "Resolves to same value while performing an optional operation",
+  "license": "MIT",
+  "repository": "niksrc/promise-always",
+  "author": {
+    "name": "Nikhil Srivastava",
+    "email": "niksrc@gmail.com",
+    "url": "niksrc.github.io"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "any-promise": "^1.3.0",
+    "is-function": "^1.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
