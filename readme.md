@@ -1,44 +1,44 @@
-# promise-always [![Build Status](https://travis-ci.org/niksrc/promise-always.svg?branch=master)](https://travis-ci.org/niksrc/promise-always)
+# promise-effect [![Build Status](https://travis-ci.org/niksrc/promise-effect.svg?branch=master)](https://travis-ci.org/niksrc/promise-effect)
 
-> Resolves to same value while performing an optional operation
+> Runs a function as promise callback and resolves the original value
 
 
 ## Install
 
 ```
-$ npm install --save promise-always
+$ npm install --save promise-effect
 ```
 
 
 ## Usage
 
 ```js
-const promiseAlways = require('promise-always');
+const effect = require('promise-effect');
 
-promiseAlways('unicorns');
-//=> 'unicorns & rainbows'
+Promise
+	.resolve(1)
+	.then(effect(x => {
+		// Destroy the world
+		// setSomeCache('My x value' , x);
+		console.log(x) //=> 1;
+	}))
+	.then(x => {
+		x === 1 //=> true
+	});
 ```
 
+## WHY
+Because modularity FTW and i was seeing this pattern a lot. Much cleaner now :)
 
 ## API
 
-### promiseAlways(input, [options])
+### effect(fn)
 
-#### input
+#### fn
 
-Type: `string`
+Type: `function`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`<br>
-Default: `false`
-
-Lorem ipsum.
-
+single param function that gets previous resolved value as parameter
 
 ## License
 

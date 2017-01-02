@@ -1,9 +1,9 @@
 {
-  "name": "promise-always",
+  "name": "promise-effect",
   "version": "0.0.0",
-  "description": "Resolves to same value while performing an optional operation",
+  "description": "Runs side effect as promise callback and returns original value",
   "license": "MIT",
-  "repository": "niksrc/promise-always",
+  "repository": "niksrc/promise-effect",
   "author": {
     "name": "Nikhil Srivastava",
     "email": "niksrc@gmail.com",
@@ -19,7 +19,8 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "Side Effect",
+    "Promise"
   ],
   "dependencies": {
     "any-promise": "^1.3.0",
